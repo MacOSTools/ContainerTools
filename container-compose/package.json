@@ -1,0 +1,28 @@
+{
+  "name": "container-compose",
+  "version": "1.0.0",
+  "description": "Run standard, unmodified docker-compose.yml files on top of Apple's `container` tool",
+  "type": "module",
+  "main": "dist/cli.js",
+  "bin": {
+    "container-compose": "dist/cli.js"
+  },
+  "scripts": {
+    "start": "node dist/cli.js",
+    "dev": "tsx src/cli.ts",
+    "build": "tsc && chmod +x dist/cli.js",
+    "clean": "rm -rf dist"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "yaml": "^2.6.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
